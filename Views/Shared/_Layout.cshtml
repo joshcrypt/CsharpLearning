@@ -1,0 +1,23 @@
+﻿@using CsharpLearning.Controllers
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>@ViewBag.Title</header>
+    <section>
+        <menu>
+            <ul>
+                <li><a asp-controller="App" asp-action="Index">Home</a></li>
+                <li><a asp-controller="App" asp-action="Contacts">Contacts</a></li>
+                <li><a asp-controller="App" asp-action="About">About</a></li>
+                @RenderBody()
+            </ul>
+        </menu>
+    </section>
+    <footer>Copyright 2017 Joshua Mangi</footer>
+    <link href="~/css/index.css" rel="stylesheet" />
+</body>
+</html>
