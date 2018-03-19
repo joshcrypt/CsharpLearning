@@ -18,6 +18,13 @@ namespace CsharpLearning.Controllers
         public IActionResult Contacts()
         {
             ViewBag.Title = "Contact US";
+            //throw new InvalidOperationException("Bad things happened");
+            return View();
+        }
+        [HttpPost("contacts")]
+        public IActionResult Contacts(object model)
+        {
+            ViewBag.Title = "Contact Us";
             return View();
         }
         public IActionResult About()

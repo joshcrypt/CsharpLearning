@@ -26,7 +26,11 @@ namespace CsharpLearning
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseDeveloperExceptionPage();
+            else
+            {
+                app.UseExceptionHandler("/error");
+            }
+            //app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
             app.UseMvc(cfg =>
                 {
