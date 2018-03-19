@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using CsharpLearning.ViewModels;
 
 namespace CsharpLearning.Controllers
 {
@@ -22,7 +23,7 @@ namespace CsharpLearning.Controllers
             return View();
         }
         [HttpPost("contacts")]
-        public IActionResult Contacts(object model)
+        public IActionResult Contacts(ContactViewModel model)
         {
             ViewBag.Title = "Contact Us";
             return View();
