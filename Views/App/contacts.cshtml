@@ -1,18 +1,20 @@
-﻿@{ 
+﻿@model ContactViewModel
+@{ 
     ViewBag.Title = "Contact Us";
 }
 <form method="post">
-    <label>Username</label>
+    <div asp-validation-summary="All"></div>
+    <label asp-for="name">Username</label>
     <br />
-    <input name="name"/>
+    <input asp-for="name" />
     <br />
-    <label>Email</label>
+    <label asp-for="email">Email</label>
+    <br /> 
+    <input asp-for="email" name="email" />
     <br />
-    <input type="email" name="email" />
+    <label asp-for="subject">Subject</label>
     <br />
-    <label>Subject</label>
-    <br />
-    <input type="text" name="subject"/>
+    <input type="text" asp-for="subject"/>
     <br />
     <label>Message</label>
     <br />
